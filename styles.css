@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: Oswald;
+    margin-bottom: 20px;
+    letter-spacing: 1.px;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: #ffffff;
+    font-weight: 300;
+    margin-top: 20px;
+    width: 100%;
+    margin: 0;
+}
+
+main {
+    margin-left: 150px;
+    /* max-width: 1300px; */
+    /* max-width: 1300px; */
+    width: calc(100% - 150px);
+    text-align: left;
+    color: black;
+    font-size: 18px;
+    height: 100%;
+    padding: 20px;
+}
+
+.element-title {
+    text-align: left;
+    font-size: 50px;
+}
+
+code {
+    background-color: rgb(225, 224, 224);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: monospace;
+}
+
+ol,
+ul {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+p {
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.underline {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+
+/* Sidebar CCS Start */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 100%;
+    background: #eeeeee;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 5px 0 10px;
+    font-weight: 300;
+}
+
+.scrollbox {
+    overflow: auto;
+    visibility: hidden;
+    height: calc(100% - 10px);
+}
+
+.scrollbox-inner,
+.scrollbox:hover {
+    visibility: visible;
+}
+
+.scrollbox-inner a {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(89, 0, 255);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+
+
+/* Sidebar CSS End */
+
+.mobile-nav {
+    display: none;
+}
+
+
+
+/*-------------------------
+----- Responsive CSS ------
+-------------------------*/
+
+@media (max-width:1000px) {
+    .mobile-nav {
+        display: block;
+        margin-bottom: 0;
+        padding: 20px;
+        background: #eeeeee;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        box-shadow: 0px 20px 30px -25px rgba(0, 0, 0, 0.55);
+    }
+
+    .mobile-nav button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 7px;
+    }
+
+    .mobile-nav button svg {
+        width: 20px;
+        margin: 0;
+    }
+
+    main {
+        margin: 70px 0 0;
+        width: 100%;
+        /* padding: 0 20px; */
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+        width: 200px;
+        height: 100vh;
+        overflow-y: scroll;
+        box-shadow: 10px 0px 30px -20px rgba(0, 0, 0, 0.85);
+    }
+
+    .scrollbox {
+        overflow: unset;
+    }
+
+    .scrollbox-inner {
+        overflow-y: scroll;
+    }
+
+    .show {
+        display: block;
+    }
+}
